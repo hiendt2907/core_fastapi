@@ -2,14 +2,14 @@
 FROM python:3.11-slim
 
 # Set working directory inside container
-WORKDIR /app
+WORKDIR /root/core_fastapi
 
 # Copy requirements and install dependencies
-COPY core_fastapi/requirements.txt .
+COPY /root/core_fastapi/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy entire app code
-COPY core_fastapi/ .
+COPY /root/core_fastapi/ .
 
 # Expose port
 EXPOSE 8000

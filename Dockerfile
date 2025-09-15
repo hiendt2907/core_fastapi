@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Set working directory trong container
-WORKDIR /app
+WORKDIR /
 
 # Copy requirements.txt từ thư mục core_fastapi
 COPY core_fastapi/requirements.txt .

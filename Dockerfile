@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /
 
 # Copy requirements.txt từ thư mục core_fastapi
-COPY core_fastapi/requirements.txt .
+COPY /root/core_fastapi/requirements.txt .
 
 # Cài dependencies
 RUN pip install --no-cache-dir -r requirements.txt

@@ -64,8 +64,3 @@ async def on_startup():
 @app.get("/", tags=["Health"])
 async def health_check():
     return {"status": "ok", "env": settings.APP_ENV}
-
-class Settings(BaseSettings):
-    JWT_SECRET: str = os.getenv("JWT_SECRET", "")
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "")
-

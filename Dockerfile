@@ -1,14 +1,15 @@
 # Dockerfile
 FROM python:3.11-slim
 
-WORKDIR /app
+# Set working directory to core_fastapi
+WORKDIR /app/core_fastapi
 
 # Install dependencies
-COPY requirements.txt .
+COPY core_fastapi/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code
-COPY . .
+# Copy entire project
+COPY core_fastapi .
 
 # Expose port
 EXPOSE 8000
